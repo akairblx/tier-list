@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,32 +21,129 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: rgba(0,0,0,0.3);
+
+        /* Hero Image Section */
+        .hero-section {
+            position: relative;
+            width: 100%;
             border-radius: 20px;
+            overflow: hidden;
             margin-bottom: 30px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 0 30px rgba(255, 107, 107, 0.3), 0 0 60px rgba(168, 85, 247, 0.2);
         }
-        header h1 {
-            font-size: 2.5em;
-            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
+        .hero-section img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
-        header .subtitle {
-            color: #aaa;
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 26, 46, 0.95), rgba(26, 26, 46, 0.4), transparent);
+            padding: 40px 20px 20px;
+        }
+        .hero-title {
+            font-size: 2.2em;
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 2px 4px rgba(0,0,0,0.8);
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .hero-subtitle {
+            text-align: center;
+            color: #feca57;
             font-size: 1.1em;
+            margin-top: 5px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
         }
-        header .last-updated {
-            color: #888;
+        .hero-date {
+            text-align: center;
+            color: #aaa;
             font-size: 0.9em;
-            margin-top: 10px;
+            margin-top: 8px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
         }
 
+        /* How to Get Fruits Section */
+        .how-to-get-section {
+            margin: 30px 0;
+            background: rgba(0,0,0,0.4);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+        }
+        .how-to-get-section h2 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ffd700;
+        }
+        .info-card:last-child {
+            margin-bottom: 0;
+        }
+        .info-card h3 {
+            color: #feca57;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .info-card p {
+            color: #ccc;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+        .info-card .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .info-card .time-badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        /* Mastery Reminder */
+        .mastery-section {
+            margin: 30px 0;
+            background: rgba(0,0,0,0.4);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(78, 205, 196, 0.3);
+            box-shadow: 0 0 20px rgba(78, 205, 196, 0.1);
+        }
+        .mastery-section h2 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: #4ecdc4;
+        }
+        .mastery-section .info-card {
+            border-left-color: #4ecdc4;
+        }
+        .mastery-section .info-card h3 {
+            color: #4ecdc4;
+        }
+
+        /* Tier Sections */
         .tier-section {
             margin-bottom: 25px;
             border-radius: 15px;
@@ -95,6 +192,7 @@
             padding: 20px;
         }
 
+        /* Fruit Cards */
         .fruit-card {
             background: rgba(255,255,255,0.05);
             border-radius: 12px;
@@ -117,6 +215,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            flex-wrap: wrap;
         }
         .fruit-icon {
             width: 32px;
@@ -153,6 +252,23 @@
             font-size: 0.95em;
         }
 
+        /* Rarity badges */
+        .rarity-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .rarity-mythic { background: linear-gradient(90deg, #ff6b6b, #feca57); color: #1a1a2e; }
+        .rarity-legendary { background: linear-gradient(90deg, #a29bfe, #6c5ce7); color: #fff; }
+        .rarity-epic { background: linear-gradient(90deg, #fd79a8, #e84393); color: #fff; }
+        .rarity-rare { background: linear-gradient(90deg, #74b9ff, #0984e3); color: #fff; }
+        .rarity-common { background: linear-gradient(90deg, #b2bec3, #636e72); color: #fff; }
+
+        /* Scaling colors */
         .scaling-chakra .fruit-name { color: #74b9ff; }
         .scaling-chakra { border-left-color: #74b9ff; }
         .scaling-chakra .fruit-icon { background: rgba(116, 185, 255, 0.2); }
@@ -161,6 +277,7 @@
         .scaling-strength { border-left-color: #ff7675; }
         .scaling-strength .fruit-icon { background: rgba(255, 118, 117, 0.2); }
 
+        /* Quick Summary Table */
         .summary-section {
             margin: 30px 0;
             background: rgba(0,0,0,0.3);
@@ -207,6 +324,7 @@
         .chakra-tag { color: #74b9ff; font-weight: 600; }
         .strength-tag { color: #ff7675; font-weight: 600; }
 
+        /* Footer */
         footer {
             text-align: center;
             padding: 30px;
@@ -215,8 +333,9 @@
             margin-top: 40px;
         }
 
+        /* Responsive */
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8em; }
+            .hero-title { font-size: 1.5em; }
             .tier-header { font-size: 1.3em; }
             .fruit-name { font-size: 1.1em; }
             th, td { padding: 8px; font-size: 0.9em; }
@@ -225,226 +344,379 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>🍎 Anime Fighting Simulator</h1>
-            <p class="subtitle">Fruits Tier List 2026</p>
-            <p class="last-updated">📅 Última actualización: 2026-07-03</p>
-        </header>
+        <!-- Hero Image -->
+        <div class="hero-section">
+            <img src="foto.png" alt="Anime Fighting Simulator">
+            <div class="hero-overlay">
+                <div class="hero-title">[🗡️UPD 2.5] Anime Fighting Simulator</div>
+                <div class="hero-subtitle">Fruits Tier List 2026</div>
+                <div class="hero-date">📅 Last updated: 2026-07-03</div>
+            </div>
+        </div>
 
+        <!-- How to Get Fruits Section -->
+        <div class="how-to-get-section">
+            <h2>❓ How to get a devil fruit?</h2>
+            
+            <div class="info-card">
+                <h3>🌳 Fruits under the trees</h3>
+                <p>
+                    Fruits spawn <span class="highlight">under the trees</span> throughout the server at <span class="time-badge">45 min</span> when a server starts for the first time, and then every <span class="time-badge">30 min</span> after. Fruits despawn in <span class="time-badge">10 min</span>.
+                    <br><br>
+                    <span class="highlight">🆕 NEW:</span> Now the spawn timer starts when the fruit is <span class="highlight">picked up or despawned</span>.
+                </p>
+            </div>
+            
+            <div class="info-card">
+                <h3>🎰 Other ways to get fruits</h3>
+                <p>
+                    Another way to get fruits is by using <span class="highlight">fruit spins</span> that are obtained from <span class="highlight">codes</span> given by the game creators on the official <span class="highlight">Discord</span>, and directly in the <span class="highlight">store</span> buying random fruits.
+                </p>
+            </div>
+        </div>
+
+        <!-- Mastery Reminder -->
+        <div class="mastery-section">
+            <h2>📈 Reminder</h2>
+            <div class="info-card">
+                <h3>🎯 Fruit Mastery</h3>
+                <p>
+                    To unlock <span class="highlight">all abilities</span> of the fruits, you must level up its <span class="highlight">mastery</span> by doing <span class="highlight">farming</span>, killing <span class="highlight">bosses</span>, <span class="highlight">NPCs</span> among others.
+                </p>
+            </div>
+        </div>
+
+        <!-- Quick Summary -->
         <div class="summary-section">
-            <h2>📊 Resumen Rápido</h2>
+            <h2>📊 Fruit Rankings</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Fruta</th>
+                        <th>#</th>
+                        <th>Fruit</th>
                         <th>Tier</th>
-                        <th>Escala con</th>
-                        <th>Descripción</th>
+                        <th>Rarity</th>
+                        <th>Scales with</th>
+                        <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Light</strong></td>
-                        <td><span class="tier-tag tag-s">S</span></td>
-                        <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Teletransporte y rayos rápidos, actualmente bufeada</td>
-                    </tr>
-                    <tr>
+                        <td><strong>1</strong></td>
                         <td><strong>Flame</strong></td>
                         <td><span class="tier-tag tag-s">S</span></td>
+                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
                         <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Bolas de fuego, daño constante</td>
+                        <td>Fireballs, constant damage</td>
                     </tr>
                     <tr>
+                        <td><strong>2</strong></td>
+                        <td><strong>Magma</strong></td>
+                        <td><span class="tier-tag tag-s">S</span></td>
+                        <td><span class="rarity-badge rarity-mythic">Mythic</span></td>
+                        <td><span class="chakra-tag">Chakra</span></td>
+                        <td>Good damage, excellent for farming</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3</strong></td>
                         <td><strong>Sand</strong></td>
                         <td><span class="tier-tag tag-s">S</span></td>
+                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
                         <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Buenos combos, ataque a distancia</td>
+                        <td>Good combos, ranged attack</td>
                     </tr>
                     <tr>
-                        <td><strong>Magma</strong></td>
-                        <td><span class="tier-tag tag-a">A</span></td>
+                        <td><strong>4</strong></td>
+                        <td><strong>Light</strong></td>
+                        <td><span class="tier-tag tag-s">S</span></td>
+                        <td><span class="rarity-badge rarity-mythic">Mythic</span></td>
                         <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Buen daño, excelente para farmear</td>
+                        <td>Teleport and fast beams, currently buffed</td>
                     </tr>
                     <tr>
+                        <td><strong>5</strong></td>
                         <td><strong>Ice</strong></td>
                         <td><span class="tier-tag tag-a">A</span></td>
+                        <td><span class="rarity-badge rarity-mythic">Mythic</span></td>
                         <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Daño constante con congelación</td>
+                        <td>Constant damage with freezing</td>
                     </tr>
                     <tr>
+                        <td><strong>6</strong></td>
                         <td><strong>Quake</strong></td>
                         <td><span class="tier-tag tag-b">B</span></td>
-                        <td><span class="strength-tag">Fuerza</span></td>
-                        <td>Poco alcance, la única habilidad buena es la V (de chakra)</td>
+                        <td><span class="rarity-badge rarity-epic">Epic</span></td>
+                        <td><span class="strength-tag">Strength</span></td>
+                        <td>Short range, only good ability is V (chakra)</td>
                     </tr>
                     <tr>
+                        <td><strong>7</strong></td>
                         <td><strong>Rubber</strong></td>
                         <td><span class="tier-tag tag-c">C</span></td>
-                        <td><span class="strength-tag">Fuerza</span></td>
-                        <td>Fruta común, poco alcance, buena para principiantes</td>
+                        <td><span class="rarity-badge rarity-rare">Rare</span></td>
+                        <td><span class="strength-tag">Strength</span></td>
+                        <td>Common fruit, short range, good for beginners</td>
                     </tr>
                     <tr>
+                        <td><strong>8</strong></td>
                         <td><strong>Chop</strong></td>
                         <td><span class="tier-tag tag-c">C</span></td>
-                        <td><span class="strength-tag">Fuerza</span></td>
-                        <td>La fruta más común del juego</td>
+                        <td><span class="rarity-badge rarity-common">Common</span></td>
+                        <td><span class="strength-tag">Strength</span></td>
+                        <td>The most common fruit in the game</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
+        <!-- S Tier -->
         <div class="tier-section tier-s">
             <div class="tier-header">
                 <div class="tier-badge">S</div>
-                <span>Tier S — Las Mejores Frutas</span>
+                <span>Tier S — The Best Fruits</span>
             </div>
             <div class="tier-content">
                 <div class="fruit-card scaling-chakra">
                     <div class="fruit-name">
-                        <div class="fruit-icon">⚡</div>
-                        Light
+                        <div class="fruit-icon">🔥</div>
+                        Flame
+                        <span class="rarity-badge rarity-legendary">Legendary</span>
                     </div>
                     <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Escala:</span> <span class="value">Chakra</span></div>
+                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
                         <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                        <div class="stat-badge"><span class="label">Movilidad:</span> <span class="value">★★★★★</span></div>
+                        <div class="stat-badge"><span class="label">Damage:</span> <span class="value">★★★★★</span></div>
                     </div>
                     <div class="fruit-desc">
-                        Teletransporte y rayos rápidos. Actualmente bufeada, es la mejor fruta del juego gracias a su velocidad y versatilidad.
+                        Currently the best fruit in the game, good damage, ranged attacks for farming and bosses.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Flame Fist (Z): Boss Damage (24 → 28) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Fire Fly (X): Boss Damage (18 → 20) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Flame Pillar (C): Boss Damage (8 → 7) / Cooldown (10 → 12) <span style="color: #888;">(Mastery 25)</span></li>
+                            <li>Enkai (V): Boss Damage (13 → 11) <span style="color: #888;">(Mastery 60)</span></li>
+                        </ul>
+                        <br>
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> Z and X damage was buffed in this update.
+                        <br>
+                        <span style="color: #ff6b6b; font-weight: bold;">❌ NERF:</span> C and V were nerfed.
                     </div>
                 </div>
                 <div class="fruit-card scaling-chakra">
                     <div class="fruit-name">
-                        <div class="fruit-icon">🔥</div>
-                        Flame
+                        <div class="fruit-icon">🌋</div>
+                        Magma
+                        <span class="rarity-badge rarity-mythic">Mythic</span>
                     </div>
                     <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Escala:</span> <span class="value">Chakra</span></div>
+                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
                         <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                        <div class="stat-badge"><span class="label">Daño:</span> <span class="value">★★★★★</span></div>
+                        <div class="stat-badge"><span class="label">Farming:</span> <span class="value">★★★★★</span></div>
                     </div>
                     <div class="fruit-desc">
-                        Bolas de fuego, daño constante. Excelente para eliminar enemigos rápidamente con ataques sostenidos.
+                        Magma did NOT receive a buff because it has a <span class="highlight">consistency</span> issue with the ability itself, rather than a damage problem. Magma has an issue where either all its attacks hit and deal significant damage, or almost none hit and deal very little.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Molten Core <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Magma Fist <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Magma Eruption <span style="color: #888;">(Mastery 35)</span></li>
+                            <li>Magma Shower <span style="color: #888;">(Mastery 80)</span></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="fruit-card scaling-chakra">
                     <div class="fruit-name">
                         <div class="fruit-icon">🏜️</div>
                         Sand
+                        <span class="rarity-badge rarity-legendary">Legendary</span>
                     </div>
                     <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Escala:</span> <span class="value">Chakra</span></div>
+                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
                         <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                        <div class="stat-badge"><span class="label">Rango:</span> <span class="value">★★★★★</span></div>
+                        <div class="stat-badge"><span class="label">Range:</span> <span class="value">★★★★★</span></div>
                     </div>
                     <div class="fruit-desc">
-                        Buenos combos, ataque a distancia. Permite mantener a los enemigos lejos mientras infliges daño constante.
+                        Good combos, ranged attack. Allows keeping enemies away while dealing constant damage.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Sand Railgun (Z): Boss Damage (35 → 40) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Sand Coffin (X): Boss Damage (10 → 8) [6 Ticks] <span style="color: #888;">(Mastery 10)</span></li>
+                            <li>Sand Tornado (C): Boss Damage (30 → 23) <span style="color: #888;">(Mastery 20)</span></li>
+                            <li>Sand Spada (V): Boss Damage (85 → 90) <span style="color: #888;">(Mastery 40)</span></li>
+                        </ul>
+                        <br>
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> Z and V damage was buffed in this update.
+                        <br>
+                        <span style="color: #ff6b6b; font-weight: bold;">❌ NERF:</span> X and C were nerfed.
+                    </div>
+                </div>
+                <div class="fruit-card scaling-chakra">
+                    <div class="fruit-name">
+                        <div class="fruit-icon">⚡</div>
+                        Light
+                        <span class="rarity-badge rarity-mythic">Mythic</span>
+                    </div>
+                    <div class="fruit-stats">
+                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                        <div class="stat-badge"><span class="label">Mobility:</span> <span class="value">★★★★★</span></div>
+                    </div>
+                    <div class="fruit-desc">
+                        Fast beams. Very good for farming due to its damage.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Light Kick (Z): Boss Damage (40 → 45) / Cooldown (8 → 7) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Light Saber (X) <span style="color: #888;">(Mastery 10)</span></li>
+                            <li>Reflection Kick (C) <span style="color: #888;">(Mastery 25)</span></li>
+                            <li>Skybeam Barrage (V): Boss Damage (13 → 15) [10 Ticks] <span style="color: #888;">(Mastery 50)</span></li>
+                        </ul>
+                        <br>
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> Z and V damage was buffed in this update.
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- A Tier -->
         <div class="tier-section tier-a">
             <div class="tier-header">
                 <div class="tier-badge">A</div>
-                <span>Tier A — Frutas Fuertes</span>
+                <span>Tier A — Strong Fruits</span>
             </div>
             <div class="tier-content">
                 <div class="fruit-card scaling-chakra">
                     <div class="fruit-name">
-                        <div class="fruit-icon">🌋</div>
-                        Magma
-                    </div>
-                    <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Escala:</span> <span class="value">Chakra</span></div>
-                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">A</span></div>
-                        <div class="stat-badge"><span class="label">Farmeo:</span> <span class="value">★★★★★</span></div>
-                    </div>
-                    <div class="fruit-desc">
-                        Buen daño, excelente para farmear. Ideal para jugadores que quieren maximizar su eficiencia recolectando recursos.
-                    </div>
-                </div>
-                <div class="fruit-card scaling-chakra">
-                    <div class="fruit-name">
                         <div class="fruit-icon">❄️</div>
                         Ice
+                        <span class="rarity-badge rarity-mythic">Mythic</span>
                     </div>
                     <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Escala:</span> <span class="value">Chakra</span></div>
+                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
                         <div class="stat-badge"><span class="label">Tier:</span> <span class="value">A</span></div>
                         <div class="stat-badge"><span class="label">Control:</span> <span class="value">★★★★☆</span></div>
                     </div>
                     <div class="fruit-desc">
-                        Daño constante con congelación. Muy confiable para controlar el campo de batalla y ralentizar enemigos.
+                        Constant damage with freezing. Very reliable for controlling the battlefield and slowing enemies.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Ice Partisan (Z): Boss Damage (8 → 13) [4 Ticks] <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Glaciar Surge (X) <span style="color: #888;">(Mastery 10)</span></li>
+                            <li>Pheasant Beak (C) <span style="color: #888;">(Mastery 25)</span></li>
+                            <li>Ice Awakening (V) <span style="color: #888;">(Mastery 50)</span></li>
+                        </ul>
+                        <br>
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> Z damage was increased.
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- B Tier -->
         <div class="tier-section tier-b">
             <div class="tier-header">
                 <div class="tier-badge">B</div>
-                <span>Tier B — Opciones Servibles</span>
+                <span>Tier B — Viable Options</span>
             </div>
             <div class="tier-content">
                 <div class="fruit-card scaling-strength">
                     <div class="fruit-name">
                         <div class="fruit-icon">💥</div>
                         Quake
+                        <span class="rarity-badge rarity-epic">Epic</span>
                     </div>
                     <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Escala:</span> <span class="value">Fuerza</span></div>
+                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
                         <div class="stat-badge"><span class="label">Tier:</span> <span class="value">B</span></div>
-                        <div class="stat-badge"><span class="label">Alcance:</span> <span class="value">★★☆☆☆</span></div>
+                        <div class="stat-badge"><span class="label">Reach:</span> <span class="value">★★☆☆☆</span></div>
                     </div>
                     <div class="fruit-desc">
-                        Esta fruta tiene poco alcance. La única habilidad buena es la V (de chakra). Úsala con precaución y enfócate en maximizar esa habilidad.
+                        This fruit has little reach. The only good ability is V (chakra). It received a buff in this update.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Shock Punch (Z): Boss Damage (25 → 30) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Blast Clutcher (X): Boss Damage (45 → 50) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Quake Punch (C): Boss Damage (30 → 35) <span style="color: #888;">(Mastery 25)</span></li>
+                            <li>Tsunami (V): Boss Damage (30 → 35) [4 Ticks] <span style="color: #888;">(Mastery 60)</span></li>
+                        </ul>
+                        <br>
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> All abilities were buffed in this update.
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- C Tier -->
         <div class="tier-section tier-c">
             <div class="tier-header">
                 <div class="tier-badge">C</div>
-                <span>Tier C — Frutas Comunes</span>
+                <span>Tier C — Common Fruits</span>
             </div>
             <div class="tier-content">
                 <div class="fruit-card scaling-strength">
                     <div class="fruit-name">
                         <div class="fruit-icon">🦘</div>
                         Rubber
+                        <span class="rarity-badge rarity-rare">Rare</span>
                     </div>
                     <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Escala:</span> <span class="value">Fuerza</span></div>
+                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
                         <div class="stat-badge"><span class="label">Tier:</span> <span class="value">C</span></div>
-                        <div class="stat-badge"><span class="label">Dificultad:</span> <span class="value">Fácil</span></div>
+                        <div class="stat-badge"><span class="label">Difficulty:</span> <span class="value">Easy</span></div>
                     </div>
                     <div class="fruit-desc">
-                        Fruta común, poco alcance, buena para principiantes. Útil para aprender las mecánicas del juego antes de conseguir algo mejor.
+                        Common fruit, short range, good for beginners. Useful for learning game mechanics before getting something better.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Pistol (Z)</li>
+                            <li>Axe (X)</li>
+                            <li>Bazooka (C)</li>
+                            <li>Gatling (V)</li>
+                        </ul>
+                        <br>
+                        <strong style="color: #ff7675;">🔥 Second Gear</strong>
+                        <p style="margin-top: 5px; color: #ccc;">Activated using the durability power of Second Gear.</p>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Jet Pistol (Z)</li>
+                            <li>Jet Gatling (X)</li>
+                            <li>Gear Third Punch (C)</li>
+                            <li>Gear Third Axe (V)</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="fruit-card scaling-strength">
                     <div class="fruit-name">
                         <div class="fruit-icon">✂️</div>
                         Chop
+                        <span class="rarity-badge rarity-common">Common</span>
                     </div>
                     <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Escala:</span> <span class="value">Fuerza</span></div>
+                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
                         <div class="stat-badge"><span class="label">Tier:</span> <span class="value">C</span></div>
-                        <div class="stat-badge"><span class="label">Rareza:</span> <span class="value">Muy Común</span></div>
+                        <div class="stat-badge"><span class="label">Rarity:</span> <span class="value">Very Common</span></div>
                     </div>
                     <div class="fruit-desc">
-                        La fruta más común del juego. Reemplázala tan pronto como puedas por cualquier fruta de tier superior.
+                        The most common fruit in the game. Replace it as soon as you can with any higher tier fruit.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Whirlwind (Z)</li>
+                            <li>Carousel (X)</li>
+                            <li>Go Kart (C)</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
         <footer>
-            <p>📄 Anime Fighting Simulator Wiki 2026, creado por Akai.</p>
+            <p>📄 Anime Fighting Simulator Wiki 2026, created by Akai.</p>
         </footer>
     </div>
 </body>
