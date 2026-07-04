@@ -447,30 +447,50 @@
         .fruit-card:last-child {
             margin-bottom: 0;
         }
+
+        /* ===== FRUIT HEADER WITH IMAGE ===== */
+        .fruit-header-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .fruit-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .fruit-card:hover .fruit-image {
+            transform: scale(1.08);
+        }
+
+        .fruit-title-group {
+            flex: 1;
+        }
+
         .fruit-name {
             font-size: 1.4em;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
             gap: 10px;
             flex-wrap: wrap;
         }
-        .fruit-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-        }
+
         .fruit-stats {
             display: flex;
-            gap: 15px;
-            margin-bottom: 10px;
+            gap: 10px;
             flex-wrap: wrap;
         }
+
         .stat-badge {
             background: rgba(255,255,255,0.1);
             padding: 4px 12px;
@@ -489,6 +509,7 @@
             color: #bbb;
             line-height: 1.6;
             font-size: 0.95em;
+            margin-top: 10px;
         }
 
         /* Rarity badges */
@@ -510,11 +531,9 @@
         /* Scaling colors */
         .scaling-chakra .fruit-name { color: #74b9ff; }
         .scaling-chakra { border-left-color: #74b9ff; }
-        .scaling-chakra .fruit-icon { background: rgba(116, 185, 255, 0.2); }
 
         .scaling-strength .fruit-name { color: #ff7675; }
         .scaling-strength { border-left-color: #ff7675; }
-        .scaling-strength .fruit-icon { background: rgba(255, 118, 117, 0.2); }
 
         /* Quick Summary Table */
         .summary-section {
@@ -578,6 +597,7 @@
             .tier-header { font-size: 1.3em; }
             .fruit-name { font-size: 1.1em; }
             th, td { padding: 8px; font-size: 0.9em; }
+            .fruit-image { width: 55px; height: 55px; }
         }
     </style>
 </head>
@@ -782,16 +802,21 @@
                 <span>Tier S — The Best Fruits</span>
             </div>
             <div class="tier-content">
+                <!-- FLAME -->
                 <div class="fruit-card scaling-chakra">
-                    <div class="fruit-name">
-                        <div class="fruit-icon">🔥</div>
-                        Flame
-                        <span class="rarity-badge rarity-legendary">Legendary</span>
-                    </div>
-                    <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                        <div class="stat-badge"><span class="label">Damage:</span> <span class="value">★★★★★</span></div>
+                    <div class="fruit-header-row">
+                        <img src="flame.png" alt="Flame Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Flame
+                                <span class="rarity-badge rarity-legendary">Legendary</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                                <div class="stat-badge"><span class="label">Damage:</span> <span class="value">★★★★★</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="fruit-desc">
                         Currently the best fruit in the game, good damage, ranged attacks for farming and bosses.
@@ -809,16 +834,22 @@
                         <span style="color: #ff6b6b; font-weight: bold;">❌ NERF:</span> C and V were nerfed.
                     </div>
                 </div>
+                
+                <!-- MAGMA -->
                 <div class="fruit-card scaling-chakra">
-                    <div class="fruit-name">
-                        <div class="fruit-icon">🌋</div>
-                        Magma
-                        <span class="rarity-badge rarity-mythic">Mythic</span>
-                    </div>
-                    <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                        <div class="stat-badge"><span class="label">Farming:</span> <span class="value">★★★★★</span></div>
+                    <div class="fruit-header-row">
+                        <img src="magma.png" alt="Magma Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Magma
+                                <span class="rarity-badge rarity-mythic">Mythic</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                                <div class="stat-badge"><span class="label">Farming:</span> <span class="value">★★★★★</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="fruit-desc">
                         Magma did NOT receive a buff because it has a <span class="highlight">consistency</span> issue with the ability itself, rather than a damage problem. Magma has an issue where either all its attacks hit and deal significant damage, or almost none hit and deal very little.
@@ -832,16 +863,22 @@
                         </ul>
                     </div>
                 </div>
+                
+                <!-- SAND -->
                 <div class="fruit-card scaling-chakra">
-                    <div class="fruit-name">
-                        <div class="fruit-icon">🏜️</div>
-                        Sand
-                        <span class="rarity-badge rarity-legendary">Legendary</span>
-                    </div>
-                    <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                        <div class="stat-badge"><span class="label">Range:</span> <span class="value">★★★★★</span></div>
+                    <div class="fruit-header-row">
+                        <img src="sand.png" alt="Sand Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Sand
+                                <span class="rarity-badge rarity-legendary">Legendary</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                                <div class="stat-badge"><span class="label">Range:</span> <span class="value">★★★★★</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="fruit-desc">
                         Good combos, ranged attack. Allows keeping enemies away while dealing constant damage.
@@ -859,16 +896,22 @@
                         <span style="color: #ff6b6b; font-weight: bold;">❌ NERF:</span> X and C were nerfed.
                     </div>
                 </div>
+                
+                <!-- LIGHT -->
                 <div class="fruit-card scaling-chakra">
-                    <div class="fruit-name">
-                        <div class="fruit-icon">⚡</div>
-                        Light
-                        <span class="rarity-badge rarity-mythic">Mythic</span>
-                    </div>
-                    <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                        <div class="stat-badge"><span class="label">Mobility:</span> <span class="value">★★★★★</span></div>
+                    <div class="fruit-header-row">
+                        <img src="light.png" alt="Light Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Light
+                                <span class="rarity-badge rarity-mythic">Mythic</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                                <div class="stat-badge"><span class="label">Mobility:</span> <span class="value">★★★★★</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="fruit-desc">
                         Fast beams. Very good for farming due to its damage.
@@ -894,16 +937,21 @@
                 <span>Tier A — Strong Fruits</span>
             </div>
             <div class="tier-content">
+                <!-- ICE -->
                 <div class="fruit-card scaling-chakra">
-                    <div class="fruit-name">
-                        <div class="fruit-icon">❄️</div>
-                        Ice
-                        <span class="rarity-badge rarity-mythic">Mythic</span>
-                    </div>
-                    <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">A</span></div>
-                        <div class="stat-badge"><span class="label">Control:</span> <span class="value">★★★★☆</span></div>
+                    <div class="fruit-header-row">
+                        <img src="Ice.png" alt="Ice Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Ice
+                                <span class="rarity-badge rarity-mythic">Mythic</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">A</span></div>
+                                <div class="stat-badge"><span class="label">Control:</span> <span class="value">★★★★☆</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="fruit-desc">
                         Constant damage with freezing. Very reliable for controlling the battlefield and slowing enemies.
@@ -929,16 +977,21 @@
                 <span>Tier B — Viable Options</span>
             </div>
             <div class="tier-content">
+                <!-- QUAKE -->
                 <div class="fruit-card scaling-strength">
-                    <div class="fruit-name">
-                        <div class="fruit-icon">💥</div>
-                        Quake
-                        <span class="rarity-badge rarity-epic">Epic</span>
-                    </div>
-                    <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
-                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">B</span></div>
-                        <div class="stat-badge"><span class="label">Reach:</span> <span class="value">★★☆☆☆</span></div>
+                    <div class="fruit-header-row">
+                        <img src="quake.png" alt="Quake Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Quake
+                                <span class="rarity-badge rarity-epic">Epic</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">B</span></div>
+                                <div class="stat-badge"><span class="label">Reach:</span> <span class="value">★★☆☆☆</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="fruit-desc">
                         This fruit has little reach. The only good ability is V (chakra). It received a buff in this update.
@@ -964,16 +1017,21 @@
                 <span>Tier C — Common Fruits</span>
             </div>
             <div class="tier-content">
+                <!-- RUBBER -->
                 <div class="fruit-card scaling-strength">
-                    <div class="fruit-name">
-                        <div class="fruit-icon">🦘</div>
-                        Rubber
-                        <span class="rarity-badge rarity-rare">Rare</span>
-                    </div>
-                    <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
-                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">C</span></div>
-                        <div class="stat-badge"><span class="label">Difficulty:</span> <span class="value">Easy</span></div>
+                    <div class="fruit-header-row">
+                        <img src="rubber.png" alt="Rubber Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Rubber
+                                <span class="rarity-badge rarity-rare">Rare</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">C</span></div>
+                                <div class="stat-badge"><span class="label">Difficulty:</span> <span class="value">Easy</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="fruit-desc">
                         Common fruit, short range, good for beginners. Useful for learning game mechanics before getting something better.
@@ -996,16 +1054,22 @@
                         </ul>
                     </div>
                 </div>
+                
+                <!-- CHOP -->
                 <div class="fruit-card scaling-strength">
-                    <div class="fruit-name">
-                        <div class="fruit-icon">✂️</div>
-                        Chop
-                        <span class="rarity-badge rarity-common">Common</span>
-                    </div>
-                    <div class="fruit-stats">
-                        <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
-                        <div class="stat-badge"><span class="label">Tier:</span> <span class="value">C</span></div>
-                        <div class="stat-badge"><span class="label">Rarity:</span> <span class="value">Very Common</span></div>
+                    <div class="fruit-header-row">
+                        <img src="chop.png" alt="Chop Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Chop
+                                <span class="rarity-badge rarity-common">Common</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">C</span></div>
+                                <div class="stat-badge"><span class="label">Rarity:</span> <span class="value">Very Common</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="fruit-desc">
                         The most common fruit in the game. Replace it as soon as you can with any higher tier fruit.
