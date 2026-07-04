@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Anime Fighting Simulator - Kagune Tier List (2026)</title>
+    <link rel="icon" type="image/png" href="noFilter.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            border-bottom: 2px solid #e94560;
+            margin: -20px -20px 20px -20px;
+            width: calc(100% + 40px);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            height: 60px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e94560;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #b8c5d6;
+            text-decoration: none;
+            padding: 1.1rem 1.2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #e94560;
+            border-bottom-color: #e94560;
+            background: rgba(233, 69, 96, 0.08);
+        }
+
+        /* ===== DROPDOWN ===== */
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .arrow {
+            font-size: 0.65rem;
+            transition: transform 0.3s ease;
+            margin-left: 4px;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: linear-gradient(180deg, #1a1a2e 0%, #0f3460 100%);
+            min-width: 220px;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            list-style: none;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(233, 69, 96, 0.2);
+            border-top: 2px solid #e94560;
+        }
+
+        .dropdown:hover > .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #b8c5d6;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-link:hover {
+            color: #fff;
+            background: rgba(233, 69, 96, 0.15);
+            border-left-color: #e94560;
+            padding-left: 1.5rem;
+        }
+
+        /* ===== SUBMENU ===== */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu > .submenu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: linear-gradient(180deg, #0f3460 0%, #1a1a2e 100%);
+            min-width: 200px;
+            border-radius: 0 12px 12px 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            list-style: none;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(233, 69, 96, 0.2);
+        }
+
+        .dropdown-submenu:hover > .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        /* ===== HAMBURGER ===== */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #e94560;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 900px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background: #1a1a2e;
+                width: 100%;
+                text-align: left;
+                transition: 0.3s;
+                padding: 1rem 0;
+                max-height: calc(100vh - 60px);
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                padding: 1rem 1.5rem;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+
+            .dropdown-menu,
+            .submenu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: transparent;
+                border: none;
+                display: none;
+                padding-left: 1.5rem;
+                min-width: auto;
+                border-radius: 0;
+            }
+
+            .dropdown.active > .dropdown-menu,
+            .dropdown-submenu.active > .submenu {
+                display: block;
+            }
+
+            .dropdown-submenu > .submenu {
+                left: 0;
+                border-radius: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        /* Hero Image Section */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 0 30px rgba(255, 107, 107, 0.3), 0 0 60px rgba(168, 85, 247, 0.2);
+        }
+        .hero-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 26, 46, 0.95), rgba(26, 26, 46, 0.4), transparent);
+            padding: 40px 20px 20px;
+        }
+        .hero-title {
+            font-size: 2.2em;
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 2px 4px rgba(0,0,0,0.8);
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .hero-subtitle {
+            text-align: center;
+            color: #feca57;
+            font-size: 1.1em;
+            margin-top: 5px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+        }
+        .hero-date {
+            text-align: center;
+            color: #aaa;
+            font-size: 0.9em;
+            margin-top: 8px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+        }
+
+        /* How to Get Section */
+        .how-to-get-section {
+            margin: 30px 0;
+            background: rgba(0,0,0,0.4);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+        }
+        .how-to-get-section h2 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            color: #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ffd700;
+        }
+        .info-card:last-child {
+            margin-bottom: 0;
+        }
+        .info-card h3 {
+            color: #feca57;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .info-card p {
+            color: #ccc;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+        .info-card .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .info-card .time-badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        /* Tier Sections */
+        .tier-section {
+            margin-bottom: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid;
+            background: rgba(0,0,0,0.4);
+        }
+        .tier-header {
+            padding: 15px 25px;
+            font-size: 1.8em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .tier-header .tier-badge {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .tier-s { border-color: #ffd700; }
+        .tier-s .tier-header { background: linear-gradient(90deg, #ffd700, #ffaa00); color: #1a1a2e; }
+        .tier-s .tier-badge { background: #ffd700; color: #1a1a2e; }
+
+        .tier-a { border-color: #4ecdc4; }
+        .tier-a .tier-header { background: linear-gradient(90deg, #4ecdc4, #44a08d); color: #fff; }
+        .tier-a .tier-badge { background: #4ecdc4; color: #1a1a2e; }
+
+        .tier-b { border-color: #95e1d3; }
+        .tier-b .tier-header { background: linear-gradient(90deg, #95e1d3, #6ab04c); color: #1a1a2e; }
+        .tier-b .tier-badge { background: #95e1d3; color: #1a1a2e; }
+
+        .tier-c { border-color: #f38181; }
+        .tier-c .tier-header { background: linear-gradient(90deg, #f38181, #e66767); color: #fff; }
+        .tier-c .tier-badge { background: #f38181; color: #fff; }
+
+        .tier-content {
+            padding: 20px;
+        }
+
+        /* Kagune Cards */
+        .kagune-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .kagune-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .kagune-card:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== KAGUNE HEADER WITH IMAGE ===== */
+        .kagune-header-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .kagune-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .kagune-card:hover .kagune-image {
+            transform: scale(1.08);
+        }
+
+        .kagune-title-group {
+            flex: 1;
+        }
+
+        .kagune-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .kagune-stats {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .stat-badge {
+            background: rgba(255,255,255,0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #ccc;
+        }
+        .stat-badge .label {
+            color: #888;
+        }
+        .stat-badge .value {
+            color: #fff;
+            font-weight: 600;
+        }
+        .kagune-desc {
+            color: #bbb;
+            line-height: 1.6;
+            font-size: 0.95em;
+            margin-top: 10px;
+        }
+
+        /* Rarity badges */
+        .rarity-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .rarity-mythic { background: linear-gradient(90deg, #ff6b6b, #feca57); color: #1a1a2e; }
+        .rarity-legendary { background: linear-gradient(90deg, #a29bfe, #6c5ce7); color: #fff; }
+        .rarity-epic { background: linear-gradient(90deg, #fd79a8, #e84393); color: #fff; }
+        .rarity-rare { background: linear-gradient(90deg, #74b9ff, #0984e3); color: #fff; }
+        .rarity-common { background: linear-gradient(90deg, #b2bec3, #636e72); color: #fff; }
+
+        /* Scaling colors */
+        .scaling-chakra .kagune-name { color: #74b9ff; }
+        .scaling-chakra { border-left-color: #74b9ff; }
+
+        .scaling-strength .kagune-name { color: #ff7675; }
+        .scaling-strength { border-left-color: #ff7675; }
+
+        /* Quick Summary Table */
+        .summary-section {
+            margin: 30px 0;
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .summary-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #feca57;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: rgba(255,255,255,0.1);
+            padding: 12px;
+            text-align: left;
+            color: #feca57;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        tr:hover {
+            background: rgba(255,255,255,0.03);
+        }
+        .tier-tag {
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .tag-s { background: #ffd700; color: #1a1a2e; }
+        .tag-a { background: #4ecdc4; color: #1a1a2e; }
+        .tag-b { background: #95e1d3; color: #1a1a2e; }
+        .tag-c { background: #f38181; color: #fff; }
+
+        .chakra-tag { color: #74b9ff; font-weight: 600; }
+        .strength-tag { color: #ff7675; font-weight: 600; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero-title { font-size: 1.5em; }
+            .tier-header { font-size: 1.3em; }
+            .kagune-name { font-size: 1.1em; }
+            th, td { padding: 8px; font-size: 0.9em; }
+            .kagune-image { width: 55px; height: 55px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="noFilter.png" alt="AFS Logo">
+                <span>AFS 2026 WIKI</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                
+                <!-- GAME CONTENT DROPDOWN -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Game Content
+                        <span class="arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-link">
+                                Basic Information
+                                <span class="arrow">▶</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="#" class="dropdown-link">Strength</a></li>
+                                <li><a href="#" class="dropdown-link">Durability</a></li>
+                                <li><a href="#" class="dropdown-link">Chakra</a></li>
+                                <li><a href="#" class="dropdown-link">Sword</a></li>
+                                <li><a href="#" class="dropdown-link">Agility</a></li>
+                                <li><a href="#" class="dropdown-link">Speed</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="dropdown-link">Powers</a></li>
+                        <li><a href="#" class="dropdown-link">Bosses</a></li>
+                        <li><a href="#" class="dropdown-link">Champions</a></li>
+                    </ul>
+                </li>
+                
+                <!-- SPECIALS DROPDOWN -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Specials
+                        <span class="arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-link">Stands</a></li>
+                        <li><a href="index.html" class="dropdown-link">Fruits</a></li>
+                        <li><a href="kagune.html" class="dropdown-link active">Kagune</a></li>
+                        <li><a href="#" class="dropdown-link">Cursed Techniques</a></li>
+                        <li><a href="#" class="dropdown-link">Authority</a></li>
+                        <li><a href="#" class="dropdown-link">Permanent</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item"><a href="#" class="nav-link">Codes</a></li>
+                <li class="nav-item"><a href="https://discord.gg/animefighting" target="_blank" class="nav-link">Discord</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Image -->
+        <div class="hero-section">
+            <img src="fotoafs.jpg" alt="Anime Fighting Simulator">
+            <div class="hero-overlay">
+                <div class="hero-title">[UPD 2.5] Anime Fighting Simulator</div>
+                <div class="hero-subtitle">Kagune Tier List 2026</div>
+                <div class="hero-date">Last updated: 2026-07-04</div>
+            </div>
+        </div>
+
+        <!-- How to Get Kagunes Section -->
+        <div class="how-to-get-section">
+            <h2>How to get a Kagune?</h2>
+            
+            <div class="info-card">
+                <h3>Kagune Spins</h3>
+                <p>
+                    Kagunes are obtained through <span class="highlight">Kagune Spins</span> that can be purchased in the <span class="highlight">store</span> or obtained from <span class="highlight">codes</span> on the official Discord.
+                </p>
+            </div>
+            
+            <div class="info-card">
+                <h3>Kagune Mastery</h3>
+                <p>
+                    To unlock <span class="highlight">all abilities</span> of your Kagune, you must level up its <span class="highlight">mastery</span> by defeating <span class="highlight">bosses</span>, <span class="highlight">NPCs</span>, and completing <span class="highlight">quests</span>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Quick Summary -->
+        <div class="summary-section">
+            <h2>Kagune Rankings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Kagune</th>
+                        <th>Tier</th>
+                        <th>Rarity</th>
+                        <th>Scales with</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1</strong></td>
+                        <td><strong>Example Kagune</strong></td>
+                        <td><span class="tier-tag tag-s">S</span></td>
+                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
+                        <td><span class="chakra-tag">Chakra</span></td>
+                        <td>Description here</td>
+                    </tr>
+                    <!-- Agrega más filas aquí -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- S Tier -->
+        <div class="tier-section tier-s">
+            <div class="tier-header">
+                <div class="tier-badge">S</div>
+                <span>Tier S — The Best Kagunes</span>
+            </div>
+            <div class="tier-content">
+                <!-- EJEMPLO DE KAGUNE -->
+                <div class="kagune-card scaling-chakra">
+                    <div class="kagune-header-row">
+                        <img src="kagune-ejemplo.png" alt="Example Kagune" class="kagune-image">
+                        <div class="kagune-title-group">
+                            <div class="kagune-name">
+                                Example Kagune
+                                <span class="rarity-badge rarity-legendary">Legendary</span>
+                            </div>
+                            <div class="kagune-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                                <div class="stat-badge"><span class="label">Damage:</span> <span class="value">★★★★★</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kagune-desc">
+                        Description of the Kagune here.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Ability 1 (Z) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Ability 2 (X) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Ability 3 (C) <span style="color: #888;">(Mastery 35)</span></li>
+                            <li>Ability 4 (V) <span style="color: #888;">(Mastery 80)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- A Tier -->
+        <div class="tier-section tier-a">
+            <div class="tier-header">
+                <div class="tier-badge">A</div>
+                <span>Tier A — Strong Kagunes</span>
+            </div>
+            <div class="tier-content">
+                <!-- Agrega kagunes aquí -->
+            </div>
+        </div>
+
+        <!-- B Tier -->
+        <div class="tier-section tier-b">
+            <div class="tier-header">
+                <div class="tier-badge">B</div>
+                <span>Tier B — Viable Options</span>
+            </div>
+            <div class="tier-content">
+                <!-- Agrega kagunes aquí -->
+            </div>
+        </div>
+
+        <!-- C Tier -->
+        <div class="tier-section tier-c">
+            <div class="tier-header">
+                <div class="tier-badge">C</div>
+                <span>Tier C — Common Kagunes</span>
+            </div>
+            <div class="tier-content">
+                <!-- Agrega kagunes aquí -->
+            </div>
+        </div>
+
+        <footer>
+            <p>Anime Fighting Simulator Wiki 2026, created by Akai.</p>
+        </footer>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const dropdowns = document.querySelectorAll('.dropdown, .dropdown-submenu');
+
+        hamburger?.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Mobile dropdown toggle
+        dropdowns.forEach(drop => {
+            drop.addEventListener('click', (e) => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    drop.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
