@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Fighting Simulator - Fruits Tier List (2026)</title>
+    <!-- FAVICON - Miniatura en la pestaña -->
+    <link rel="icon" type="image/png" href="https://tr.rbxcdn.com/180DAY-7e8c9c3e8c9c3e8c9c3e8c9c3e8c9c3e/150/150/Image/Png">
     <style>
         * {
             margin: 0;
@@ -20,6 +22,233 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            border-bottom: 2px solid #e94560;
+            margin: -20px -20px 20px -20px;
+            width: calc(100% + 40px);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            height: 60px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #b8c5d6;
+            text-decoration: none;
+            padding: 1.1rem 1.2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #e94560;
+            border-bottom-color: #e94560;
+            background: rgba(233, 69, 96, 0.08);
+        }
+
+        /* ===== DROPDOWN ===== */
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .arrow {
+            font-size: 0.65rem;
+            transition: transform 0.3s ease;
+            margin-left: 4px;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: linear-gradient(180deg, #1a1a2e 0%, #0f3460 100%);
+            min-width: 220px;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            list-style: none;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(233, 69, 96, 0.2);
+            border-top: 2px solid #e94560;
+        }
+
+        .dropdown:hover > .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #b8c5d6;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-link:hover {
+            color: #fff;
+            background: rgba(233, 69, 96, 0.15);
+            border-left-color: #e94560;
+            padding-left: 1.5rem;
+        }
+
+        /* ===== SUBMENU (Basic Information) ===== */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu > .submenu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: linear-gradient(180deg, #0f3460 0%, #1a1a2e 100%);
+            min-width: 200px;
+            border-radius: 0 12px 12px 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            list-style: none;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(233, 69, 96, 0.2);
+        }
+
+        .dropdown-submenu:hover > .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        /* ===== HAMBURGER ===== */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #e94560;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 900px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background: #1a1a2e;
+                width: 100%;
+                text-align: left;
+                transition: 0.3s;
+                padding: 1rem 0;
+                max-height: calc(100vh - 60px);
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                padding: 1rem 1.5rem;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+
+            .dropdown-menu,
+            .submenu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: transparent;
+                border: none;
+                display: none;
+                padding-left: 1.5rem;
+                min-width: auto;
+                border-radius: 0;
+            }
+
+            .dropdown.active > .dropdown-menu,
+            .dropdown-submenu.active > .submenu {
+                display: block;
+            }
+
+            .dropdown-submenu > .submenu {
+                left: 0;
+                border-radius: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
         }
 
         /* Hero Image Section */
@@ -343,6 +572,70 @@
     </style>
 </head>
 <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">🎮 AFS Wiki</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                
+                <!-- GAME CONTENT DROPDOWN -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        🎮 Game Content
+                        <span class="arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-link">
+                                📋 Basic Information
+                                <span class="arrow">▶</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="#" class="dropdown-link">💪 Strength</a></li>
+                                <li><a href="#" class="dropdown-link">🛡️ Durability</a></li>
+                                <li><a href="#" class="dropdown-link">✨ Chakra</a></li>
+                                <li><a href="#" class="dropdown-link">⚔️ Sword</a></li>
+                                <li><a href="#" class="dropdown-link">🏃 Agility</a></li>
+                                <li><a href="#" class="dropdown-link">💨 Speed</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="dropdown-link">⚡ Powers</a></li>
+                        <li><a href="#" class="dropdown-link">👹 Bosses</a></li>
+                        <li><a href="#" class="dropdown-link">🏆 Champions</a></li>
+                    </ul>
+                </li>
+                
+                <!-- SPECIALS DROPDOWN -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Specials
+                        <span class="arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-link">🕴️ Stands</a></li>
+                        <li><a href="#" class="dropdown-link">🍎 Fruits</a></li>
+                        <li><a href="#" class="dropdown-link">👁️ Kagune</a></li>
+                        <li><a href="#" class="dropdown-link">🔥 Cursed Techniques</a></li>
+                        <li><a href="#" class="dropdown-link">👑 Authority</a></li>
+                        <li><a href="#" class="dropdown-link">⭐ Permanent</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item"><a href="#" class="nav-link">Codes</a></li>
+                <li class="nav-item"><a href="https://discord.gg/animefighting" target="_blank" class="nav-link">Discord</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <!-- Hero Image -->
         <div class="hero-section">
@@ -719,5 +1012,28 @@
             <p>📄 Anime Fighting Simulator Wiki 2026, created by Akai.</p>
         </footer>
     </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const dropdowns = document.querySelectorAll('.dropdown, .dropdown-submenu');
+
+        hamburger?.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Mobile dropdown toggle
+        dropdowns.forEach(drop => {
+            drop.addEventListener('click', (e) => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    drop.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
