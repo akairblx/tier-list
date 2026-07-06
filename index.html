@@ -600,17 +600,6 @@
             .fruit-image { width: 55px; height: 55px; }
         }
 
-        /* New fruit placeholder style */
-        .placeholder-note {
-            background: rgba(233, 69, 96, 0.1);
-            border: 1px dashed rgba(233, 69, 96, 0.4);
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 10px;
-            color: #e94560;
-            font-style: italic;
-        }
-
         /* Heal badge */
         .heal-badge {
             display: inline-block;
@@ -756,11 +745,11 @@
                 <tbody>
                     <tr>
                         <td><strong>1</strong></td>
-                        <td><strong>Phoenix</strong></td>
+                        <td><strong>Flame</strong></td>
                         <td><span class="tier-tag tag-s">S</span></td>
-                        <td><span class="rarity-badge rarity-mythic">Mythic</span></td>
+                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
                         <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Game Pass fruit, good damage, healing ability</td>
+                        <td>Fireballs, constant damage</td>
                     </tr>
                     <tr>
                         <td><strong>2</strong></td>
@@ -772,19 +761,19 @@
                     </tr>
                     <tr>
                         <td><strong>3</strong></td>
-                        <td><strong>Flame</strong></td>
-                        <td><span class="tier-tag tag-s">S</span></td>
-                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
-                        <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Fireballs, constant damage</td>
-                    </tr>
-                    <tr>
-                        <td><strong>4</strong></td>
                         <td><strong>Magma</strong></td>
                         <td><span class="tier-tag tag-s">S</span></td>
                         <td><span class="rarity-badge rarity-mythic">Mythic</span></td>
                         <td><span class="chakra-tag">Chakra</span></td>
                         <td>Good damage, excellent for farming</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4</strong></td>
+                        <td><strong>Phoenix</strong></td>
+                        <td><span class="tier-tag tag-s">S</span></td>
+                        <td><span class="rarity-badge rarity-mythic">Mythic</span></td>
+                        <td><span class="chakra-tag">Chakra</span></td>
+                        <td>Game Pass fruit, good damage, healing ability</td>
                     </tr>
                     <tr>
                         <td><strong>5</strong></td>
@@ -845,34 +834,36 @@
                 <span>Tier S — The Best Fruits</span>
             </div>
             <div class="tier-content">
-                <!-- PHOENIX -->
+                <!-- FLAME -->
                 <div class="fruit-card scaling-chakra">
                     <div class="fruit-header-row">
-                        <img src="phoenix.png" alt="Phoenix Fruit" class="fruit-image">
+                        <img src="flame.png" alt="Flame Fruit" class="fruit-image">
                         <div class="fruit-title-group">
                             <div class="fruit-name">
-                                Phoenix
-                                <span class="rarity-badge rarity-mythic">Mythic</span>
+                                Flame
+                                <span class="rarity-badge rarity-legendary">Legendary</span>
                             </div>
                             <div class="fruit-stats">
                                 <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
                                 <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                                <div class="stat-badge"><span class="label">Obtain:</span> <span class="value">Game Pass</span></div>
+                                <div class="stat-badge"><span class="label">Damage:</span> <span class="value">★★★★★</span></div>
                             </div>
                         </div>
                     </div>
                     <div class="fruit-desc">
-                        New fruit with great design, damage and attacks. Its C ability is <span class="heal-badge">🩹 HEALING</span>.
+                        Currently the best fruit in the game, good damage, ranged attacks for farming and bosses.
                         <br><br>
                         <strong style="color: #feca57;">Abilities:</strong>
                         <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
-                            <li>Flare Kick (Z) <span style="color: #888;">(Mastery 0)</span></li>
-                            <li>Blazing Vortex (X) <span style="color: #888;">(Mastery 15)</span></li>
-                            <li>Azure Inferno (C) <span style="color: #4ecdc4; font-weight: bold;">— HEALING</span> <span style="color: #888;">(Mastery 35)</span></li>
-                            <li>Rising Phoenix (V) <span style="color: #888;">(Mastery 80)</span></li>
+                            <li>Flame Fist (Z): Boss Damage (24 → 28) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Fire Fly (X): Boss Damage (18 → 20) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Flame Pillar (C): Boss Damage (8 → 7) / Cooldown (10 → 12) <span style="color: #888;">(Mastery 25)</span></li>
+                            <li>Enkai (V): Boss Damage (13 → 11) <span style="color: #888;">(Mastery 60)</span></li>
                         </ul>
                         <br>
-                        <span style="color: #4ecdc4; font-weight: bold;">✅ NEW:</span> Added in Update 3.
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> Z and X damage was buffed in this update.
+                        <br>
+                        <span style="color: #ff6b6b; font-weight: bold;">❌ NERF:</span> C and V were nerfed.
                     </div>
                 </div>
 
@@ -907,39 +898,6 @@
                     </div>
                 </div>
                 
-                <!-- FLAME -->
-                <div class="fruit-card scaling-chakra">
-                    <div class="fruit-header-row">
-                        <img src="flame.png" alt="Flame Fruit" class="fruit-image">
-                        <div class="fruit-title-group">
-                            <div class="fruit-name">
-                                Flame
-                                <span class="rarity-badge rarity-legendary">Legendary</span>
-                            </div>
-                            <div class="fruit-stats">
-                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                                <div class="stat-badge"><span class="label">Damage:</span> <span class="value">★★★★★</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fruit-desc">
-                        Currently one of the best fruits in the game, good damage, ranged attacks for farming and bosses.
-                        <br><br>
-                        <strong style="color: #feca57;">Abilities:</strong>
-                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
-                            <li>Flame Fist (Z): Boss Damage (24 → 28) <span style="color: #888;">(Mastery 0)</span></li>
-                            <li>Fire Fly (X): Boss Damage (18 → 20) <span style="color: #888;">(Mastery 15)</span></li>
-                            <li>Flame Pillar (C): Boss Damage (8 → 7) / Cooldown (10 → 12) <span style="color: #888;">(Mastery 25)</span></li>
-                            <li>Enkai (V): Boss Damage (13 → 11) <span style="color: #888;">(Mastery 60)</span></li>
-                        </ul>
-                        <br>
-                        <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> Z and X damage was buffed in this update.
-                        <br>
-                        <span style="color: #ff6b6b; font-weight: bold;">❌ NERF:</span> C and V were nerfed.
-                    </div>
-                </div>
-                
                 <!-- MAGMA -->
                 <div class="fruit-card scaling-chakra">
                     <div class="fruit-header-row">
@@ -966,6 +924,37 @@
                             <li>Magma Eruption <span style="color: #888;">(Mastery 35)</span></li>
                             <li>Magma Shower <span style="color: #888;">(Mastery 80)</span></li>
                         </ul>
+                    </div>
+                </div>
+
+                <!-- PHOENIX -->
+                <div class="fruit-card scaling-chakra">
+                    <div class="fruit-header-row">
+                        <img src="phoenix.png" alt="Phoenix Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Phoenix
+                                <span class="rarity-badge rarity-mythic">Mythic</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                                <div class="stat-badge"><span class="label">Obtain:</span> <span class="value">Game Pass</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fruit-desc">
+                        New fruit with great design, damage and attacks. Its C ability is <span class="heal-badge">🩹 HEALING</span>.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Flare Kick (Z) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Blazing Vortex (X) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Azure Inferno (C) <span style="color: #4ecdc4; font-weight: bold;">— HEALING</span> <span style="color: #888;">(Mastery 35)</span></li>
+                            <li>Rising Phoenix (V) <span style="color: #888;">(Mastery 80)</span></li>
+                        </ul>
+                        <br>
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ NEW:</span> Added in Update 3.
                     </div>
                 </div>
             </div>
