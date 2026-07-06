@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Anime Fighting Simulator - Kagune Tier List (2026)</title>
     <link rel="icon" type="image/png" href="noFilter.png">
     <style>
@@ -359,6 +361,31 @@
             font-weight: bold;
         }
 
+        /* Location Card */
+        .location-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e94560;
+        }
+        .location-card h3 {
+            color: #e94560;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .location-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 2px solid rgba(233, 69, 96, 0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
         /* Tier Sections */
         .tier-section {
             margin-bottom: 25px;
@@ -403,6 +430,10 @@
         .tier-c { border-color: #f38181; }
         .tier-c .tier-header { background: linear-gradient(90deg, #f38181, #e66767); color: #fff; }
         .tier-c .tier-badge { background: #f38181; color: #fff; }
+
+        .tier-d { border-color: #b2bec3; }
+        .tier-d .tier-header { background: linear-gradient(90deg, #b2bec3, #636e72); color: #1a1a2e; }
+        .tier-d .tier-badge { background: #b2bec3; color: #1a1a2e; }
 
         .tier-content {
             padding: 20px;
@@ -503,6 +534,7 @@
         .rarity-legendary { background: linear-gradient(90deg, #a29bfe, #6c5ce7); color: #fff; }
         .rarity-epic { background: linear-gradient(90deg, #fd79a8, #e84393); color: #fff; }
         .rarity-rare { background: linear-gradient(90deg, #74b9ff, #0984e3); color: #fff; }
+        .rarity-uncommon { background: linear-gradient(90deg, #55efc4, #00b894); color: #1a1a2e; }
         .rarity-common { background: linear-gradient(90deg, #b2bec3, #636e72); color: #fff; }
 
         /* Scaling colors */
@@ -555,6 +587,7 @@
         .tag-a { background: #4ecdc4; color: #1a1a2e; }
         .tag-b { background: #95e1d3; color: #1a1a2e; }
         .tag-c { background: #f38181; color: #fff; }
+        .tag-d { background: #b2bec3; color: #1a1a2e; }
 
         .chakra-tag { color: #74b9ff; font-weight: 600; }
         .strength-tag { color: #ff7675; font-weight: 600; }
@@ -651,9 +684,9 @@
         <div class="hero-section">
             <img src="fotoafs.jpg" alt="Anime Fighting Simulator">
             <div class="hero-overlay">
-                <div class="hero-title">[UPD 2.5] Anime Fighting Simulator</div>
+                <div class="hero-title">[UPD 3] Anime Fighting Simulator</div>
                 <div class="hero-subtitle">Kagune Tier List 2026</div>
-                <div class="hero-date">Last updated: 2026-07-04</div>
+                <div class="hero-date">Last updated: 2026-07-06</div>
             </div>
         </div>
 
@@ -664,8 +697,16 @@
             <div class="info-card">
                 <h3>Kagune Spins</h3>
                 <p>
-                    Kagunes are obtained through <span class="highlight">Kagune Spins</span> that can be purchased in the <span class="highlight">store</span> or obtained from <span class="highlight">codes</span> on the official Discord.
+                    Kagunes are obtained through <span class="highlight">Kagune Spins</span> that cost <span class="time-badge">150 Chikaras</span> each. You can purchase them in the <span class="highlight">store</span> or obtain them from <span class="highlight">codes</span> on the official Discord.
                 </p>
+            </div>
+
+            <div class="location-card">
+                <h3>📍 Where to find the Kagune Spin</h3>
+                <p>
+                    Kagunes can be obtained from the <span class="highlight">red capsule</span> thing next to the <span class="highlight">Ghoul NPC</span>. This can be found next to the <span class="highlight">parking lot behind the Gym</span> training zone.
+                </p>
+                <img src="ubikagune.png" alt="Gym Location" class="location-image">
             </div>
             
             <div class="info-card">
@@ -693,13 +734,44 @@
                 <tbody>
                     <tr>
                         <td><strong>1</strong></td>
-                        <td><strong>Example Kagune</strong></td>
+                        <td><strong>One Eye</strong></td>
                         <td><span class="tier-tag tag-s">S</span></td>
                         <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
-                        <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Description here</td>
+                        <td><span class="strength-tag">Strength</span></td>
+                        <td>Good damage but low speed</td>
                     </tr>
-                    <!-- Agrega más filas aquí -->
+                    <tr>
+                        <td><strong>2</strong></td>
+                        <td><strong>Centipede</strong></td>
+                        <td><span class="tier-tag tag-a">A</span></td>
+                        <td><span class="rarity-badge rarity-epic">Epic</span></td>
+                        <td><span class="strength-tag">Strength</span></td>
+                        <td>Second best strength kagune but short range</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3</strong></td>
+                        <td><strong>Yamori</strong></td>
+                        <td><span class="tier-tag tag-b">B</span></td>
+                        <td><span class="rarity-badge rarity-rare">Rare</span></td>
+                        <td><span class="strength-tag">Strength</span></td>
+                        <td>Good kagune but short range</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4</strong></td>
+                        <td><strong>Red Scale</strong></td>
+                        <td><span class="tier-tag tag-c">C</span></td>
+                        <td><span class="rarity-badge rarity-uncommon">Uncommon</span></td>
+                        <td><span class="strength-tag">Strength</span></td>
+                        <td>One of the easiest to use, ideal for beginners</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5</strong></td>
+                        <td><strong>Spiral Blade</strong></td>
+                        <td><span class="tier-tag tag-d">D</span></td>
+                        <td><span class="rarity-badge rarity-common">Common</span></td>
+                        <td><span class="strength-tag">Strength</span></td>
+                        <td>The easiest to use, for beginners</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -711,24 +783,24 @@
                 <span>Tier S — The Best Kagunes</span>
             </div>
             <div class="tier-content">
-                <!-- EJEMPLO DE KAGUNE -->
-                <div class="kagune-card scaling-chakra">
+                <!-- ONE EYE -->
+                <div class="kagune-card scaling-strength">
                     <div class="kagune-header-row">
-                        <img src="kagune-ejemplo.png" alt="Example Kagune" class="kagune-image">
+                        <img src="oneeye.png" alt="One Eye Kagune" class="kagune-image">
                         <div class="kagune-title-group">
                             <div class="kagune-name">
-                                Example Kagune
+                                One Eye
                                 <span class="rarity-badge rarity-legendary">Legendary</span>
                             </div>
                             <div class="kagune-stats">
-                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
                                 <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
                                 <div class="stat-badge"><span class="label">Damage:</span> <span class="value">★★★★★</span></div>
                             </div>
                         </div>
                     </div>
                     <div class="kagune-desc">
-                        Description of the Kagune here.
+                        Good damage Kagune but low speed. One of the best options for pure damage output.
                         <br><br>
                         <strong style="color: #feca57;">Abilities:</strong>
                         <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
@@ -749,7 +821,34 @@
                 <span>Tier A — Strong Kagunes</span>
             </div>
             <div class="tier-content">
-                <!-- Agrega kagunes aquí -->
+                <!-- CENTIPEDE -->
+                <div class="kagune-card scaling-strength">
+                    <div class="kagune-header-row">
+                        <img src="centipede.png" alt="Centipede Kagune" class="kagune-image">
+                        <div class="kagune-title-group">
+                            <div class="kagune-name">
+                                Centipede
+                                <span class="rarity-badge rarity-epic">Epic</span>
+                            </div>
+                            <div class="kagune-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">A</span></div>
+                                <div class="stat-badge"><span class="label">Reach:</span> <span class="value">★★★☆☆</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kagune-desc">
+                        Second best Kagune in strength but has short range. Great for close combat situations.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Ability 1 (Z) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Ability 2 (X) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Ability 3 (C) <span style="color: #888;">(Mastery 35)</span></li>
+                            <li>Ability 4 (V) <span style="color: #888;">(Mastery 80)</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -760,7 +859,34 @@
                 <span>Tier B — Viable Options</span>
             </div>
             <div class="tier-content">
-                <!-- Agrega kagunes aquí -->
+                <!-- YAMORI -->
+                <div class="kagune-card scaling-strength">
+                    <div class="kagune-header-row">
+                        <img src="yamori.png" alt="Yamori Kagune" class="kagune-image">
+                        <div class="kagune-title-group">
+                            <div class="kagune-name">
+                                Yamori
+                                <span class="rarity-badge rarity-rare">Rare</span>
+                            </div>
+                            <div class="kagune-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">B</span></div>
+                                <div class="stat-badge"><span class="label">Reach:</span> <span class="value">★★☆☆☆</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kagune-desc">
+                        Good Kagune but has short range. Decent option for mid-game players.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Ability 1 (Z) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Ability 2 (X) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Ability 3 (C) <span style="color: #888;">(Mastery 35)</span></li>
+                            <li>Ability 4 (V) <span style="color: #888;">(Mastery 80)</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -768,10 +894,75 @@
         <div class="tier-section tier-c">
             <div class="tier-header">
                 <div class="tier-badge">C</div>
-                <span>Tier C — Common Kagunes</span>
+                <span>Tier C — Basic Kagunes</span>
             </div>
             <div class="tier-content">
-                <!-- Agrega kagunes aquí -->
+                <!-- RED SCALE -->
+                <div class="kagune-card scaling-strength">
+                    <div class="kagune-header-row">
+                        <img src="Red Scale.png" alt="Red Scale Kagune" class="kagune-image">
+                        <div class="kagune-title-group">
+                            <div class="kagune-name">
+                                Red Scale
+                                <span class="rarity-badge rarity-uncommon">Uncommon</span>
+                            </div>
+                            <div class="kagune-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">C</span></div>
+                                <div class="stat-badge"><span class="label">Difficulty:</span> <span class="value">Easy</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kagune-desc">
+                        One of the easiest Kagunes to use, ideal for new players learning the game mechanics.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Ability 1 (Z) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Ability 2 (X) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Ability 3 (C) <span style="color: #888;">(Mastery 35)</span></li>
+                            <li>Ability 4 (V) <span style="color: #888;">(Mastery 80)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- D Tier -->
+        <div class="tier-section tier-d">
+            <div class="tier-header">
+                <div class="tier-badge">D</div>
+                <span>Tier D — Starter Kagunes</span>
+            </div>
+            <div class="tier-content">
+                <!-- SPIRAL BLADE -->
+                <div class="kagune-card scaling-strength">
+                    <div class="kagune-header-row">
+                        <img src="Spiral blade.png" alt="Spiral Blade Kagune" class="kagune-image">
+                        <div class="kagune-title-group">
+                            <div class="kagune-name">
+                                Spiral Blade
+                                <span class="rarity-badge rarity-common">Common</span>
+                            </div>
+                            <div class="kagune-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">D</span></div>
+                                <div class="stat-badge"><span class="label">Difficulty:</span> <span class="value">Very Easy</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kagune-desc">
+                        The easiest Kagune to use, designed for absolute beginners. Replace it as soon as you get something better.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Ability 1 (Z) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Ability 2 (X) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Ability 3 (C) <span style="color: #888;">(Mastery 35)</span></li>
+                            <li>Ability 4 (V) <span style="color: #888;">(Mastery 80)</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
