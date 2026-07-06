@@ -610,6 +610,18 @@
             color: #e94560;
             font-style: italic;
         }
+
+        /* Heal badge */
+        .heal-badge {
+            display: inline-block;
+            background: rgba(78, 205, 196, 0.2);
+            color: #4ecdc4;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-left: 8px;
+        }
     </style>
 </head>
 <body>
@@ -687,7 +699,7 @@
             <div class="hero-overlay">
                 <div class="hero-title">[UPD 3] Anime Fighting Simulator</div>
                 <div class="hero-subtitle">Fruits Tier List 2026</div>
-                <div class="hero-date">Last updated: 2026-07-04</div>
+                <div class="hero-date">Last updated: 2026-07-06</div>
             </div>
         </div>
 
@@ -708,6 +720,10 @@
                 <h3>Other ways to get fruits</h3>
                 <p>
                     Another way to get fruits is by using <span class="highlight">fruit spins</span> that are obtained from <span class="highlight">codes</span> given by the game creators on the official <span class="highlight">Discord</span>, and directly in the <span class="highlight">store</span> buying random fruits.
+                    <br><br>
+                    <span class="highlight">NEW:</span> <strong>Phoenix</strong> can be obtained through the <span class="highlight">Game Pass</span>.
+                    <br>
+                    <span class="highlight">NEW:</span> <strong>Barrier</strong> can be obtained through the <span class="highlight">Battle Pass</span>.
                 </p>
             </div>
         </div>
@@ -740,30 +756,14 @@
                 <tbody>
                     <tr>
                         <td><strong>1</strong></td>
-                        <td><strong>Flame</strong></td>
-                        <td><span class="tier-tag tag-s">S</span></td>
-                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
-                        <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Fireballs, constant damage</td>
-                    </tr>
-                    <tr>
-                        <td><strong>2</strong></td>
-                        <td><strong>Magma</strong></td>
+                        <td><strong>Phoenix</strong></td>
                         <td><span class="tier-tag tag-s">S</span></td>
                         <td><span class="rarity-badge rarity-mythic">Mythic</span></td>
                         <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Good damage, excellent for farming</td>
+                        <td>Game Pass fruit, good damage, healing ability</td>
                     </tr>
                     <tr>
-                        <td><strong>3</strong></td>
-                        <td><strong>Sand</strong></td>
-                        <td><span class="tier-tag tag-s">S</span></td>
-                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
-                        <td><span class="chakra-tag">Chakra</span></td>
-                        <td>Good combos, ranged attack</td>
-                    </tr>
-                    <tr>
-                        <td><strong>4</strong></td>
+                        <td><strong>2</strong></td>
                         <td><strong>Light</strong></td>
                         <td><span class="tier-tag tag-s">S</span></td>
                         <td><span class="rarity-badge rarity-mythic">Mythic</span></td>
@@ -771,12 +771,28 @@
                         <td>Teleport and fast beams, currently buffed</td>
                     </tr>
                     <tr>
-                        <td><strong>5</strong></td>
-                        <td><strong>Phoenix</strong></td>
+                        <td><strong>3</strong></td>
+                        <td><strong>Flame</strong></td>
+                        <td><span class="tier-tag tag-s">S</span></td>
+                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
+                        <td><span class="chakra-tag">Chakra</span></td>
+                        <td>Fireballs, constant damage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4</strong></td>
+                        <td><strong>Magma</strong></td>
                         <td><span class="tier-tag tag-s">S</span></td>
                         <td><span class="rarity-badge rarity-mythic">Mythic</span></td>
                         <td><span class="chakra-tag">Chakra</span></td>
-                        <td>NEW — Abilities coming soon</td>
+                        <td>Good damage, excellent for farming</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5</strong></td>
+                        <td><strong>Sand</strong></td>
+                        <td><span class="tier-tag tag-a">A</span></td>
+                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
+                        <td><span class="chakra-tag">Chakra</span></td>
+                        <td>Good combos, ranged attack</td>
                     </tr>
                     <tr>
                         <td><strong>6</strong></td>
@@ -789,10 +805,10 @@
                     <tr>
                         <td><strong>7</strong></td>
                         <td><strong>Barrier</strong></td>
-                        <td><span class="tier-tag tag-a">A</span></td>
-                        <td><span class="rarity-badge rarity-legendary">Legendary</span></td>
+                        <td><span class="tier-tag tag-b">B</span></td>
+                        <td><span class="rarity-badge rarity-epic">Epic</span></td>
                         <td><span class="chakra-tag">Chakra</span></td>
-                        <td>NEW — Abilities coming soon</td>
+                        <td>Battle Pass fruit, good for farming, short range</td>
                     </tr>
                     <tr>
                         <td><strong>8</strong></td>
@@ -805,7 +821,7 @@
                     <tr>
                         <td><strong>9</strong></td>
                         <td><strong>Rubber</strong></td>
-                        <td><span class="tier-tag tag-c">C</span></td>
+                        <td><span class="tier-tag tag-b">B</span></td>
                         <td><span class="rarity-badge rarity-rare">Rare</span></td>
                         <td><span class="strength-tag">Strength</span></td>
                         <td>Common fruit, short range, good for beginners</td>
@@ -829,6 +845,68 @@
                 <span>Tier S — The Best Fruits</span>
             </div>
             <div class="tier-content">
+                <!-- PHOENIX -->
+                <div class="fruit-card scaling-chakra">
+                    <div class="fruit-header-row">
+                        <img src="phoenix.png" alt="Phoenix Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Phoenix
+                                <span class="rarity-badge rarity-mythic">Mythic</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                                <div class="stat-badge"><span class="label">Obtain:</span> <span class="value">Game Pass</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fruit-desc">
+                        New fruit with great design, damage and attacks. Its C ability is <span class="heal-badge">🩹 HEALING</span>.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Flare Kick (Z) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Blazing Vortex (X) <span style="color: #888;">(Mastery 15)</span></li>
+                            <li>Azure Inferno (C) <span style="color: #4ecdc4; font-weight: bold;">— HEALING</span> <span style="color: #888;">(Mastery 35)</span></li>
+                            <li>Rising Phoenix (V) <span style="color: #888;">(Mastery 80)</span></li>
+                        </ul>
+                        <br>
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ NEW:</span> Added in Update 3.
+                    </div>
+                </div>
+
+                <!-- LIGHT -->
+                <div class="fruit-card scaling-chakra">
+                    <div class="fruit-header-row">
+                        <img src="light.png" alt="Light Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Light
+                                <span class="rarity-badge rarity-mythic">Mythic</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                                <div class="stat-badge"><span class="label">Mobility:</span> <span class="value">★★★★★</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fruit-desc">
+                        Fast beams. Very good for farming due to its damage.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Light Kick (Z): Boss Damage (40 → 45) / Cooldown (8 → 7) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Light Saber (X): Boss Damage (60 → 70) <span style="color: #888;">(Mastery 10)</span></li>
+                            <li>Reflection Kick (C) <span style="color: #888;">(Mastery 25)</span></li>
+                            <li>Skybeam Barrage (V): Boss Damage (13 → 15) [10 Ticks] <span style="color: #888;">(Mastery 50)</span></li>
+                        </ul>
+                        <br>
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> Z, X and V damage was buffed in this update.
+                    </div>
+                </div>
+                
                 <!-- FLAME -->
                 <div class="fruit-card scaling-chakra">
                     <div class="fruit-header-row">
@@ -846,7 +924,7 @@
                         </div>
                     </div>
                     <div class="fruit-desc">
-                        Currently the best fruit in the game, good damage, ranged attacks for farming and bosses.
+                        Currently one of the best fruits in the game, good damage, ranged attacks for farming and bosses.
                         <br><br>
                         <strong style="color: #feca57;">Abilities:</strong>
                         <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
@@ -890,7 +968,16 @@
                         </ul>
                     </div>
                 </div>
-                
+            </div>
+        </div>
+
+        <!-- A Tier -->
+        <div class="tier-section tier-a">
+            <div class="tier-header">
+                <div class="tier-badge">A</div>
+                <span>Tier A — Strong Fruits</span>
+            </div>
+            <div class="tier-content">
                 <!-- SAND -->
                 <div class="fruit-card scaling-chakra">
                     <div class="fruit-header-row">
@@ -902,7 +989,7 @@
                             </div>
                             <div class="fruit-stats">
                                 <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">A</span></div>
                                 <div class="stat-badge"><span class="label">Range:</span> <span class="value">★★★★★</span></div>
                             </div>
                         </div>
@@ -923,71 +1010,7 @@
                         <span style="color: #ff6b6b; font-weight: bold;">❌ NERF:</span> X and C were nerfed.
                     </div>
                 </div>
-                
-                <!-- LIGHT -->
-                <div class="fruit-card scaling-chakra">
-                    <div class="fruit-header-row">
-                        <img src="light.png" alt="Light Fruit" class="fruit-image">
-                        <div class="fruit-title-group">
-                            <div class="fruit-name">
-                                Light
-                                <span class="rarity-badge rarity-mythic">Mythic</span>
-                            </div>
-                            <div class="fruit-stats">
-                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                                <div class="stat-badge"><span class="label">Mobility:</span> <span class="value">★★★★★</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fruit-desc">
-                        Fast beams. Very good for farming due to its damage.
-                        <br><br>
-                        <strong style="color: #feca57;">Abilities:</strong>
-                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
-                            <li>Light Kick (Z): Boss Damage (40 → 45) / Cooldown (8 → 7) <span style="color: #888;">(Mastery 0)</span></li>
-                            <li>Light Saber (X): Boss Damage (60 → 70) <span style="color: #888;">(Mastery 10)</span></li>
-                            <li>Reflection Kick (C) <span style="color: #888;">(Mastery 25)</span></li>
-                            <li>Skybeam Barrage (V): Boss Damage (13 → 15) [10 Ticks] <span style="color: #888;">(Mastery 50)</span></li>
-                        </ul>
-                        <br>
-                        <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> Z, X and V damage was buffed in this update.
-                    </div>
-                </div>
 
-                <!-- PHOENIX -->
-                <div class="fruit-card scaling-chakra">
-                    <div class="fruit-header-row">
-                        <img src="phoenix.png" alt="Phoenix Fruit" class="fruit-image">
-                        <div class="fruit-title-group">
-                            <div class="fruit-name">
-                                Phoenix
-                                <span class="rarity-badge rarity-mythic">Mythic</span>
-                            </div>
-                            <div class="fruit-stats">
-                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">S</span></div>
-                                <div class="stat-badge"><span class="label">Status:</span> <span class="value">NEW</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fruit-desc">
-                        <div class="placeholder-note">
-                            🆕 <strong>NEW FRUIT — Update 3</strong><br>
-                            Abilities and detailed stats will be added soon. Stay tuned!
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- A Tier -->
-        <div class="tier-section tier-a">
-            <div class="tier-header">
-                <div class="tier-badge">A</div>
-                <span>Tier A — Strong Fruits</span>
-            </div>
-            <div class="tier-content">
                 <!-- ICE -->
                 <div class="fruit-card scaling-chakra">
                     <div class="fruit-header-row">
@@ -1018,30 +1041,6 @@
                         <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> All abilities were buffed in this update. Z, X and C damage increased. V cooldown reduced and endlag reduced by 30%.
                     </div>
                 </div>
-
-                <!-- BARRIER -->
-                <div class="fruit-card scaling-chakra">
-                    <div class="fruit-header-row">
-                        <img src="barrier.png" alt="Barrier Fruit" class="fruit-image">
-                        <div class="fruit-title-group">
-                            <div class="fruit-name">
-                                Barrier
-                                <span class="rarity-badge rarity-legendary">Legendary</span>
-                            </div>
-                            <div class="fruit-stats">
-                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
-                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">A</span></div>
-                                <div class="stat-badge"><span class="label">Status:</span> <span class="value">NEW</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fruit-desc">
-                        <div class="placeholder-note">
-                            🆕 <strong>NEW FRUIT — Update 3</strong><br>
-                            Abilities and detailed stats will be added soon. Stay tuned!
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -1052,6 +1051,37 @@
                 <span>Tier B — Viable Options</span>
             </div>
             <div class="tier-content">
+                <!-- BARRIER -->
+                <div class="fruit-card scaling-chakra">
+                    <div class="fruit-header-row">
+                        <img src="barrier.png" alt="Barrier Fruit" class="fruit-image">
+                        <div class="fruit-title-group">
+                            <div class="fruit-name">
+                                Barrier
+                                <span class="rarity-badge rarity-epic">Epic</span>
+                            </div>
+                            <div class="fruit-stats">
+                                <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Chakra</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">B</span></div>
+                                <div class="stat-badge"><span class="label">Obtain:</span> <span class="value">Battle Pass</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fruit-desc">
+                        New fruit obtained through the Battle Pass. Good abilities for farming, short range.
+                        <br><br>
+                        <strong style="color: #feca57;">Abilities:</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px; color: #ccc;">
+                            <li>Barrier Expansion (Z) <span style="color: #888;">(Mastery 0)</span></li>
+                            <li>Barrier Rush (X) <span style="color: #888;">(Mastery 10)</span></li>
+                            <li>Barrier Slam (C) <span style="color: #888;">(Mastery 25)</span></li>
+                            <li>Barrier Surge (V) <span style="color: #888;">(Mastery 50)</span></li>
+                        </ul>
+                        <br>
+                        <span style="color: #4ecdc4; font-weight: bold;">✅ NEW:</span> Added in Update 3.
+                    </div>
+                </div>
+
                 <!-- QUAKE -->
                 <div class="fruit-card scaling-strength">
                     <div class="fruit-header-row">
@@ -1082,16 +1112,7 @@
                         <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> All abilities were buffed in this update.
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- C Tier -->
-        <div class="tier-section tier-c">
-            <div class="tier-header">
-                <div class="tier-badge">C</div>
-                <span>Tier C — Common Fruits</span>
-            </div>
-            <div class="tier-content">
                 <!-- RUBBER -->
                 <div class="fruit-card scaling-strength">
                     <div class="fruit-header-row">
@@ -1103,7 +1124,7 @@
                             </div>
                             <div class="fruit-stats">
                                 <div class="stat-badge"><span class="label">Scale:</span> <span class="value">Strength</span></div>
-                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">C</span></div>
+                                <div class="stat-badge"><span class="label">Tier:</span> <span class="value">B</span></div>
                                 <div class="stat-badge"><span class="label">Difficulty:</span> <span class="value">Easy</span></div>
                             </div>
                         </div>
@@ -1133,7 +1154,16 @@
                         <span style="color: #4ecdc4; font-weight: bold;">✅ BUFF:</span> All Second Gear abilities were buffed in this update.
                     </div>
                 </div>
-                
+            </div>
+        </div>
+
+        <!-- C Tier -->
+        <div class="tier-section tier-c">
+            <div class="tier-header">
+                <div class="tier-badge">C</div>
+                <span>Tier C — Common Fruits</span>
+            </div>
+            <div class="tier-content">
                 <!-- CHOP -->
                 <div class="fruit-card scaling-strength">
                     <div class="fruit-header-row">
